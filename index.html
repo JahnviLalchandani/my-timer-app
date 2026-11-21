@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="app">
+        <header class="app-header">
+            <h1>Multiple Timers App</h1>
+        </header>
+        <form class="set-timer-bar" id="timer-form" novalidate>
+            <span class="bar-label">Set Time :</span>
+            <input type="number" id="hours" min="0" max="99" placeholder="hh">
+
+            <span class="colon">:</span>
+
+            <input type="number" id="minutes" min="0" max="59" placeholder="mm">
+
+
+            <span class="colon">:</span>
+            <input type="number" id="seconds" min="0" max="59" placeholder="ss">
+
+            <button class="set-button" type="submit">Set</button>
+        </form>
+        <p class="form-message" id="form-message" role="alert"></p>
+
+        <section class="timers-section">
+            <h2 class="section-pill">Current Timers</h2>
+
+            <p class="empty-state" id="empty-state">You have no timers currently.</p>
+
+            <div class="timer-list" id="timer-list">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <template id="timer-template">
+        <article class="timer-row">
+            <span class="row-label">Time Left :</span>
+            <span class="timer-display" role="timer">00:00:00</span>
+            <button class="delete-button" type="button">Delete</button>
+        </article>
+    </template>
+
+    <template id="finished-template">
+        <article class="finished-row">
+            <strong>Timer Is Up!</strong>
+            <button class="stop-button" type="button">Stop</button>
+        </article>
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>
